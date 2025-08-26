@@ -1,0 +1,153 @@
+*{
+    margin: 0;
+    padding:0;
+}
+body{
+    background-color: cadetblue;
+   
+    
+}
+
+/* Smooth moving gradient animation */
+@keyframes gradientBG {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
+}
+
+
+h1{
+    background-color:#081b31;
+    color:#fff;
+    height:5rem;
+    line-height: 5rem;
+    text-align: center;
+          background: linear-gradient(45deg, #00ff7f, #a020f0);
+
+    text-shadow: 
+        0 0 10px #00ff7f,
+        0 0 20px #00ff7f,
+        0 0 10px #a020f0,  /* Purple glow */
+        0 0 20px #00ff7f,
+        0 0 40px #a020f0;
+}
+h2{
+    text-shadow: 
+        0 0 10px blue,
+        0 0 20px #00ff7f,
+        0 0 40px #a020f0,  /* Purple glow */
+        0 0 60px blue,
+        0 0 80px #a020f0;
+}
+
+
+
+.choice{
+    height:165px;
+    width:165px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.choice:hover{
+    
+    cursor:pointer;
+    background-color: #081b31;
+}
+img{
+    height: 150px;
+    width: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+}
+.choices{
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    gap:3rem;
+    margin-top:5rem;
+}
+.choice:hover{
+    
+  color: #111;  /* Text black */
+  background: linear-gradient(45deg, #00ff7f, #a020f0); /* Green + Purple */
+  box-shadow: 0 0 20px #00ff7f,
+              0 0 40px #a020f0,
+              0 0 60px #00ff7f,
+              0 0 80px #a020f0;
+}
+.score-board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2rem;
+    margin-top: 2rem;
+    gap:5rem;
+}
+#user-score,#Comp-score{
+    font-size:4rem;
+}
+.msg-container{
+    /* Message container glow effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 10px;
+#msg {
+    color: white;
+    padding: 10px 20px;
+    border-radius: 8px;
+    font-size: 3rem;
+    text-align: center;
+    font-weight: bold;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    justify-content: center;
+    border-radius: 2%;
+    display:inline-block;
+    align-items: center;
+    animation: glow 1.5s infinite alternate;
+    transition: all 0.5s ease-in-out;
+    text-shadow: 
+        0 0 5px yellow,
+        0 0 5px #00ff7f,
+        0 0 20px #a020f0,  /* Purple glow */
+        0 0 40px yellow,
+        0 0 30px #a020f0;
+}
+
+/* Glow animation */
+@keyframes glow {
+    0% {
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7),
+                    0 0 20px rgba(255, 255, 255, 0.5);
+    }
+    100% {
+        box-shadow: 0 0 20px rgba(255, 255, 0, 1),
+                    0 0 40px rgba(255, 255, 0, 0.8);
+    }
+}
+
+}
+#msg{
+    background-color:#081b31;
+    color:#fff;
+height:5rem;
+display: flex;
+justify-content: center;
+align-items: center;
+font-size: 2rem;
+margin-top:1rem;
+padding:1rem;
+margin-bottom: 1rem;
+}
+.win-effect {
+    font-size: 2rem;
+    color: gold;
+    animation: pop 1s ease-in-out;
+}
+
+@keyframes pop {
+    0% { transform: scale(0.5); opacity: 0; }
+    100% { transform: scale(1); opacity: 1; }
+}
